@@ -3,7 +3,7 @@ let express=require("express")
 let cors=require("cors")
 require("dotenv").config()
 const rt = require("./routes/rt")
-mongoose.connect("process.env.MONGO_URL").then(()=>{
+mongoose.connect(process.env.MONGO_URL).then(()=>{
     app.listen(process.env.port||5000)
 })
 let app=express()
